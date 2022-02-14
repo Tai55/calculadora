@@ -6,7 +6,42 @@ namespace calculadora
     {
         static void Main(string[] args)
         {
-            Menu();
+            
+            calculadora calculadora = new calculadora();
+            int opcion = 0;
+            int primernumero = 0;
+            int segundonumero = 0;
+            int resultado = 0;
+            opcion = Menu();
+            Console.WriteLine("Introduzca un primer valor: ");
+            primernumero = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Introduzca un segundo valor: ");
+            segundonumero = Int32.Parse(Console.ReadLine());
+
+            if (opcion == 1)
+            {
+                Console.Clear();
+                Console.WriteLine("Ha selecionado la opcion de sumar");
+                calculadora.Sumar(primernumero, segundonumero);
+            }
+            else if (opcion == 2)
+            {
+                Console.Clear();
+                Console.WriteLine("Ha selecionado la opcion de restar");
+                calculadora.Restar(primernumero, segundonumero);
+            }
+            else if (opcion == 3)
+            {
+                Console.Clear();
+                Console.WriteLine("Ha selecionado la opcion de multiplicar");
+                calculadora.Multiplicar(primernumero, segundonumero);
+            }
+            else if (opcion == 4)
+            {
+                Console.Clear();
+                Console.WriteLine("Ha selecionado la opcion de dividir");
+                calculadora.Dividir(primernumero, segundonumero);
+            }
         }
         public static int Menu()
         {
