@@ -8,27 +8,33 @@ namespace calculadora
         int num2=0;
         int resultado=0;
         
-      //escribir por pantalla los resultados
-    
+      
+   
+
 
     public void Sumar(int num1, int num2)
     {
         int resultado = num1 + num2;
+        Console.WriteLine("El resultado es: " + resultado);
+        
     }
 
     public void Restar(int num1, int num2)
     {
         int resultado = num1- num2;
+        Console.WriteLine("El resultado es: " + resultado);
     }
 
     public void Multiplicar(int num1, int num2)
     {
         int resultado = num1 * num2;
+        Console.WriteLine("El resultado es: " + resultado);
     }
    
     public void Dividir(int num1, int num2)
     {
-        int resultado = num1/num2; 
+        int resultado = num1/num2;
+        Console.WriteLine("El resultado es: " + resultado); 
     }
 
     } 
