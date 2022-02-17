@@ -12,9 +12,11 @@ namespace calculadora
             int primernumero = 0;
             int segundonumero = 0;
             
-            opcion = Menu();
             
-
+            
+        while (opcion != 5)
+        {
+            opcion = Menu();
             if (opcion == 1)
             {
                 Console.Clear();
@@ -56,6 +58,8 @@ namespace calculadora
                 calculadora.Dividir(primernumero, segundonumero);
                 
             }
+        }
+            
             Console.ReadLine();
         }
         public static int Menu()
