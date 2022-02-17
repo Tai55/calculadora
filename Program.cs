@@ -11,55 +11,43 @@ namespace calculadora
             int opcion = 0;
             int primernumero = 0;
             int segundonumero = 0;
-            
-            
-            
+
         while (opcion != 5)
         {
+            Console.WriteLine("Antes de comenzar a calcular, escriba dos números");
+            Console.WriteLine("Introduzca el número que desee:");
+            primernumero = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Introduzca un segundo número");
+            segundonumero = Int32.Parse(Console.ReadLine());
+
             opcion = Menu();
             if (opcion == 1)
             {
                 Console.Clear();
                 Console.WriteLine("Ha selecionado la opcion de sumar");
-                Console.WriteLine("Introduzca un primer valor: ");
-                primernumero = Int32.Parse(Console.ReadLine());
-                Console.WriteLine("Introduzca un segundo valor: ");
-                segundonumero = Int32.Parse(Console.ReadLine());
+                
                 calculadora.Sumar(primernumero, segundonumero);
+                
             }
             else if (opcion == 2)
             {
                 Console.Clear();
                 Console.WriteLine("Ha selecionado la opcion de restar");
-                Console.WriteLine("Introduzca un primer valor: ");
-                primernumero = Int32.Parse(Console.ReadLine());
-                Console.WriteLine("Introduzca un segundo valor: ");
-                segundonumero = Int32.Parse(Console.ReadLine());
                 calculadora.Restar(primernumero, segundonumero);
             }
             else if (opcion == 3)
             {
                 Console.Clear();
                 Console.WriteLine("Ha selecionado la opcion de multiplicar");
-                Console.WriteLine("Introduzca un primer valor: ");
-                primernumero = Int32.Parse(Console.ReadLine());
-                Console.WriteLine("Introduzca un segundo valor: ");
-                segundonumero = Int32.Parse(Console.ReadLine());
                 calculadora.Multiplicar(primernumero, segundonumero);
             }
             else if (opcion == 4)
             {
                 Console.Clear();
                 Console.WriteLine("Ha selecionado la opcion de dividir");
-                Console.WriteLine("Introduzca un primer valor: ");
-                primernumero = Int32.Parse(Console.ReadLine());
-                Console.WriteLine("Introduzca un segundo valor: ");
-                segundonumero = Int32.Parse(Console.ReadLine());
                 calculadora.Dividir(primernumero, segundonumero);
-                
             }
         }
-            
             Console.ReadLine();
         }
         public static int Menu()
