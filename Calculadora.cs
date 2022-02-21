@@ -12,13 +12,14 @@ namespace calculadora
     {
         int resultado = num1 + num2;
         Console.WriteLine($"El resultado de la suma: {resultado}");
-        
+        Console.ReadLine();
     }
 
     public void Restar(int num1, int num2)
     {
         int resultado = num1- num2;
         Console.WriteLine($"El resultado de la resta es: {resultado}");
+        Console.ReadLine();
         
     }
 
@@ -26,6 +27,7 @@ namespace calculadora
     {
         int resultado = num1 * num2;
         Console.WriteLine($"El resultado de la multiplicación es: {resultado}");
+        Console.ReadLine();
         
     }
    
@@ -33,6 +35,7 @@ namespace calculadora
     {
         int resultado = num1/num2;
         Console.WriteLine($"El resultado de la división es: {resultado}"); 
+        Console.ReadLine();
         
     }
 
