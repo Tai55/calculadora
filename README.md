@@ -1,4 +1,4 @@
-# Proyecto _**Calculadora**_
+# PROUYECTO _**CALCULADORA**_
 ### Realizado por María Cervantes y Jesús Hernández. 
 
 #### Profesor: **Carlos Pareja**.
