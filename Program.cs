@@ -7,7 +7,7 @@ namespace calculadora
         static void Main(string[] args)
         {
             
-            calculadora calculadora = new calculadora();
+            Calculadora calculadora = new Calculadora();
             int opcion = 0;
             int primernumero = 0;
             int segundonumero = 0;
