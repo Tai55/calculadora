@@ -7,7 +7,7 @@ namespace calculadora
         static void Main(string[] args)
         {
             
-            Calculadora calculadora = new Calculadora();
+            calculadora calculadora = new calculadora();
             int opcion = 0;
             int primernumero = 0;
             int segundonumero = 0;
@@ -31,33 +31,34 @@ namespace calculadora
             Console.WriteLine("Introduzca un segundo número");
             segundonumero = Int32.Parse(Console.ReadLine());
 
-            if (opcion == 1)
+            switch (opcion)
             {
+                case 1:
                 Console.Clear();
                 Console.WriteLine("Ha selecionado la opcion de sumar");
-                
                 calculadora.Sumar(primernumero, segundonumero);
+                break;
                 
-            }
-            else if (opcion == 2)
-            {
+            
+                case 2:
                 Console.Clear();
                 Console.WriteLine("Ha selecionado la opcion de restar");
                 calculadora.Restar(primernumero, segundonumero);
-            }
-            else if (opcion == 3)
-            {
+                break;
+            
+                case 3: 
+            
                 Console.Clear();
                 Console.WriteLine("Ha selecionado la opcion de multiplicar");
                 calculadora.Multiplicar(primernumero, segundonumero);
-            }
-            else if (opcion == 4)
-            {
+                break;
+                
+                case 4:
                 Console.Clear();
                 Console.WriteLine("Ha selecionado la opcion de dividir");
                 calculadora.Dividir(primernumero, segundonumero);
+                break;
             }
-        
         }
            
     }
@@ -66,7 +67,7 @@ namespace calculadora
             Console.Title = "CALCULADORA";
             Console.WriteLine("BIENVENID@ A LA CALCULADORA DE MARÍA Y JESÚS");
             Console.WriteLine("--------------------------------------------");
-            OpcionesDelMenu();
+            opcionesDelMenu();
             int opcion = 0;
             try 
             {
@@ -79,16 +80,16 @@ namespace calculadora
                 Console.WriteLine("El valor introducido no es un valor númerico");
             }
 
-            while (EleccionUsuarionMenu(opcion)==false)
+            while (opcionMenu(opcion)==false)
             {
                Console.Clear();
                Console.WriteLine("Seleccione una opcion valida");
-               OpcionesDelMenu();
+               opcionesDelMenu();
                opcion = Int32.Parse(Console.ReadLine()); 
             }
             return opcion;
         }
-        public static bool EleccionUsuarionMenu(int opcion)
+        public static bool opcionMenu(int opcion)
         {
             if ((opcion == 1) || (opcion == 2) || (opcion == 3) || (opcion == 4) || (opcion == 5))
             {
@@ -98,7 +99,7 @@ namespace calculadora
             else 
                 return false;
         }
-        public static void OpcionesDelMenu()
+        public static void opcionesDelMenu()
         {
             Console.WriteLine("1. Suma");
             Console.WriteLine("2. Resta");
