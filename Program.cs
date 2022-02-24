@@ -7,7 +7,7 @@ namespace calculadora
         static void Main(string[] args)
         {
             
-            calculadora calculadora = new calculadora();
+            Calculadora calculadora = new Calculadora();
             int opcion = 0;
             int primernumero = 0;
             int segundonumero = 0;
@@ -66,7 +66,7 @@ namespace calculadora
             Console.Title = "CALCULADORA";
             Console.WriteLine("BIENVENID@ A LA CALCULADORA DE MARÍA Y JESÚS");
             Console.WriteLine("--------------------------------------------");
-            opcionesDelMenu();
+            OpcionesDelMenu();
             int opcion = 0;
             try 
             {
@@ -79,16 +79,16 @@ namespace calculadora
                 Console.WriteLine("El valor introducido no es un valor númerico");
             }
 
-            while (opcionMenu(opcion)==false)
+            while (EleccionUsuarionMenu(opcion)==false)
             {
                Console.Clear();
                Console.WriteLine("Seleccione una opcion valida");
-               opcionesDelMenu();
+               OpcionesDelMenu();
                opcion = Int32.Parse(Console.ReadLine()); 
             }
             return opcion;
         }
-        public static bool opcionMenu(int opcion)
+        public static bool EleccionUsuarionMenu(int opcion)
         {
             if ((opcion == 1) || (opcion == 2) || (opcion == 3) || (opcion == 4) || (opcion == 5))
             {
@@ -98,7 +98,7 @@ namespace calculadora
             else 
                 return false;
         }
-        public static void opcionesDelMenu()
+        public static void OpcionesDelMenu()
         {
             Console.WriteLine("1. Suma");
             Console.WriteLine("2. Resta");

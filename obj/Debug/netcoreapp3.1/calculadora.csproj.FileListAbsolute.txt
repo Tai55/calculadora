@@ -26,3 +26,17 @@ C:\PROYECTOS DAW\calculadora\obj\Debug\netcoreapp3.1\calculadora.csproj.CoreComp
 C:\PROYECTOS DAW\calculadora\obj\Debug\netcoreapp3.1\calculadora.dll
 C:\PROYECTOS DAW\calculadora\obj\Debug\netcoreapp3.1\calculadora.pdb
 C:\PROYECTOS DAW\calculadora\obj\Debug\netcoreapp3.1\calculadora.genruntimeconfig.cache
+C:\PROYECTOS\PROGRAMAS C#\calculadora\bin\Debug\netcoreapp3.1\calculadora.exe
+C:\PROYECTOS\PROGRAMAS C#\calculadora\bin\Debug\netcoreapp3.1\calculadora.deps.json
+C:\PROYECTOS\PROGRAMAS C#\calculadora\bin\Debug\netcoreapp3.1\calculadora.runtimeconfig.json
+C:\PROYECTOS\PROGRAMAS C#\calculadora\bin\Debug\netcoreapp3.1\calculadora.runtimeconfig.dev.json
+C:\PROYECTOS\PROGRAMAS C#\calculadora\bin\Debug\netcoreapp3.1\calculadora.dll
+C:\PROYECTOS\PROGRAMAS C#\calculadora\bin\Debug\netcoreapp3.1\calculadora.pdb
+C:\PROYECTOS\PROGRAMAS C#\calculadora\obj\Debug\netcoreapp3.1\calculadora.csproj.AssemblyReference.cache
+C:\PROYECTOS\PROGRAMAS C#\calculadora\obj\Debug\netcoreapp3.1\calculadora.GeneratedMSBuildEditorConfig.editorconfig
+C:\PROYECTOS\PROGRAMAS C#\calculadora\obj\Debug\netcoreapp3.1\calculadora.AssemblyInfoInputs.cache
+C:\PROYECTOS\PROGRAMAS C#\calculadora\obj\Debug\netcoreapp3.1\calculadora.AssemblyInfo.cs
+C:\PROYECTOS\PROGRAMAS C#\calculadora\obj\Debug\netcoreapp3.1\calculadora.csproj.CoreCompileInputs.cache
+C:\PROYECTOS\PROGRAMAS C#\calculadora\obj\Debug\netcoreapp3.1\calculadora.dll
+C:\PROYECTOS\PROGRAMAS C#\calculadora\obj\Debug\netcoreapp3.1\calculadora.pdb
+C:\PROYECTOS\PROGRAMAS C#\calculadora\obj\Debug\netcoreapp3.1\calculadora.genruntimeconfig.cache
