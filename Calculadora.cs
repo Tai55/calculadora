@@ -3,39 +3,33 @@ using System;
 namespace calculadora
 {
     class Calculadora
-    {
-        int numero1=0;
-        int numero2=0;
-        int resultado=0;
-        
-    public void Sumar(int numero1, int numero2)
+    {    
+    public int Sumar(int numero1, int numero2)
     {
         int resultado = numero1 + numero2;
         Console.WriteLine($"El resultado de la suma: {resultado}");
-        Console.ReadLine();
+        return resultado;
     }
 
-    public void Restar(int numero1, int numero2)
+    public int Restar(int numero1, int numero2)
     {
         int resultado = numero1- numero2;
         Console.WriteLine($"El resultado de la resta es: {resultado}");
-        Console.ReadLine();
-        
+        return resultado;
     }
 
-    public void Multiplicar(int numero1, int numero2)
+    public int Multiplicar(int numero1, int numero2)
     {
         int resultado = numero1 * numero2;
         Console.WriteLine($"El resultado de la multiplicación es: {resultado}");
-        Console.ReadLine();
-        
+        return resultado;
     }
    
-    public void Dividir(int numero1, int numero2)
+    public int Dividir(int numero1, int numero2)
     {
         int resultado = numero1/numero2;
-        Console.WriteLine($"El resultado de la división es: {resultado}"); 
-        Console.ReadLine();  
+        Console.WriteLine($"El resultado de la división es: {resultado}");   
+        return resultado;
     }
 
     } 
