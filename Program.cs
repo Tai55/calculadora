@@ -1,5 +1,13 @@
 ﻿using System;
 
+enum Opciones
+{
+Sumar = 1,
+Restar,
+Multiplicar,
+Dividir,
+Salir,
+}
 namespace calculadora
 {
     class Program
@@ -9,8 +17,8 @@ namespace calculadora
             
             Calculadora calculadora = new Calculadora();
             int opcion = 0;
-            int primernumero = 0;
-            int segundonumero = 0;
+            int primerNumero = 0;
+            int segundoNumero = 0;
             
 
         while (opcion != 5)
@@ -27,39 +35,39 @@ namespace calculadora
 
             Console.WriteLine("Antes de comenzar a calcular, escriba dos números");
             Console.WriteLine("Introduzca el número que desee:");
-            primernumero = Int32.Parse(Console.ReadLine());
+            primerNumero = Int32.Parse(Console.ReadLine());
             Console.WriteLine("Introduzca un segundo número");
-            segundonumero = Int32.Parse(Console.ReadLine());
+            segundoNumero = Int32.Parse(Console.ReadLine());
 
-            if (opcion == 1)
+            switch (opcion)
             {
+                case 1:
                 Console.Clear();
                 Console.WriteLine("Ha selecionado la opcion de sumar");
-                
-                calculadora.Sumar(primernumero, segundonumero);
-                
-            }
-            else if (opcion == 2)
-            {
+                calculadora.Sumar(primerNumero, segundoNumero);
+                break;
+
+                case 2:
                 Console.Clear();
                 Console.WriteLine("Ha selecionado la opcion de restar");
-                calculadora.Restar(primernumero, segundonumero);
-            }
-            else if (opcion == 3)
-            {
+                calculadora.Restar(primerNumero, segundoNumero);
+
+                break;
+
+                case 3: 
                 Console.Clear();
                 Console.WriteLine("Ha selecionado la opcion de multiplicar");
-                calculadora.Multiplicar(primernumero, segundonumero);
-            }
-            else if (opcion == 4)
-            {
+                calculadora.Multiplicar(primerNumero, segundoNumero);
+
+                break;
+
+                case 4:
                 Console.Clear();
                 Console.WriteLine("Ha selecionado la opcion de dividir");
-                calculadora.Dividir(primernumero, segundonumero);
+                calculadora.Dividir(primerNumero, segundoNumero);
+                break;
             }
-        
-        }
-           
+        }   
     }
         public static int Menu()
         {
