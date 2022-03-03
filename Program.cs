@@ -6,7 +6,7 @@ Sumar = 1,
 Restar,
 Multiplicar,
 Dividir,
-Salir,
+
 }
 namespace calculadora
 {
@@ -39,33 +39,33 @@ namespace calculadora
             Console.WriteLine("Introduzca un segundo número");
             segundoNumero = Int32.Parse(Console.ReadLine());
 
-            switch (opcion)
+            switch ((Opciones)opcion)
             {
-                case 1:
+                case Opciones.Sumar:
                 Console.Clear();
                 Console.WriteLine("Ha selecionado la opcion de sumar");
                 calculadora.Sumar(primerNumero, segundoNumero);
                 break;
 
-                case 2:
+                case Opciones.Restar:
                 Console.Clear();
                 Console.WriteLine("Ha selecionado la opcion de restar");
                 calculadora.Restar(primerNumero, segundoNumero);
 
                 break;
 
-                case 3: 
+                case Opciones.Multiplicar: 
                 Console.Clear();
                 Console.WriteLine("Ha selecionado la opcion de multiplicar");
                 calculadora.Multiplicar(primerNumero, segundoNumero);
-
                 break;
 
-                case 4:
+                case Opciones.Dividir:
                 Console.Clear();
                 Console.WriteLine("Ha selecionado la opcion de dividir");
                 calculadora.Dividir(primerNumero, segundoNumero);
                 break;
+                
             }
         }   
     }
