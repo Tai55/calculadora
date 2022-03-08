@@ -1,13 +1,5 @@
 ﻿using System;
 
-enum Opciones
-{
-Sumar = 1,
-Restar,
-Multiplicar,
-Dividir,
-
-}
 namespace calculadora
 {
     class Program
