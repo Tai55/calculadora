@@ -1,6 +1,7 @@
 ﻿using System;
+using calculadora.utilidades.enumerado;
 
-namespace calculadora
+namespace calculadora.utilidades.programa
 {
     class Program
     {
@@ -9,8 +10,8 @@ namespace calculadora
             
             Calculadora calculadora = new Calculadora();
             int opcion = 0;
-            int primernumero = 0;
-            int segundonumero = 0;
+            int primerNumero = 0;
+            int segundoNumero = 0;
             
 
         while (opcion != 5)
@@ -27,40 +28,40 @@ namespace calculadora
 
             Console.WriteLine("Antes de comenzar a calcular, escriba dos números");
             Console.WriteLine("Introduzca el número que desee:");
-            primernumero = Int32.Parse(Console.ReadLine());
+            primerNumero = Int32.Parse(Console.ReadLine());
             Console.WriteLine("Introduzca un segundo número");
-            segundonumero = Int32.Parse(Console.ReadLine());
+            segundoNumero = Int32.Parse(Console.ReadLine());
 
-            switch (opcion)
+            switch ((Opciones)opcion)
             {
-                case 1:
+                case Opciones.Sumar:
                 Console.Clear();
                 Console.WriteLine("Ha selecionado la opcion de sumar");
-                calculadora.Sumar(primernumero, segundonumero);
+                calculadora.Sumar(primerNumero, segundoNumero);
                 break;
-                
-            
-                case 2:
+
+                case Opciones.Restar:
                 Console.Clear();
                 Console.WriteLine("Ha selecionado la opcion de restar");
-                calculadora.Restar(primernumero, segundonumero);
+                calculadora.Restar(primerNumero, segundoNumero);
+
                 break;
-            
-                case 3: 
-            
+
+                case Opciones.Multiplicar: 
                 Console.Clear();
                 Console.WriteLine("Ha selecionado la opcion de multiplicar");
-                calculadora.Multiplicar(primernumero, segundonumero);
+                calculadora.Multiplicar(primerNumero, segundoNumero);
                 break;
-                
-                case 4:
+
+                case Opciones.Dividir:
                 Console.Clear();
                 Console.WriteLine("Ha selecionado la opcion de dividir");
-                calculadora.Dividir(primernumero, segundonumero);
+                calculadora.Dividir(primerNumero, segundoNumero);
                 break;
+                
             }
-        }
-           
+            Console.ReadLine();
+        }   
     }
         public static int Menu()
         {
