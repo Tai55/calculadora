@@ -1,6 +1,7 @@
 ﻿using System;
+using calculadora.utilidades.enumerado;
 
-namespace calculadora
+namespace calculadora.utilidades.programa
 {
     class Program
     {
