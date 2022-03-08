@@ -67,6 +67,7 @@ namespace calculadora
                 break;
                 
             }
+            Console.ReadLine();
         }   
     }
         public static int Menu()
