@@ -1,5 +1,6 @@
 ﻿using System;
 using calculadora.utilidades.enumerado;
+using calculadora.utilidades.calculadoraservice;
 
 namespace calculadora.utilidades.programa
 {
