@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 
 namespace calculadora
 {
-    class Program
+    class CalculadoraService
     {
-        static void Main(string[] args)
+        public void Ejecutar()
         {
             
             Calculadora calculadora = new Calculadora();
@@ -59,7 +59,9 @@ namespace calculadora
                 calculadora.Dividir(primernumero, segundonumero);
                 break;
             }
+            Console.ReadLine();
         }
+
            
     }
         public static int Menu()
