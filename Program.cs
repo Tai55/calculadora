@@ -1,6 +1,6 @@
 ﻿using System;
 using calculadora.utilidades;
-using calculadora.utilidades;
+
 
 namespace calculadora.utilidades.programa
 {
