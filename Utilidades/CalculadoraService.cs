@@ -1,6 +1,6 @@
 using System;
 
-namespace calculadora.utilidades.calculadoraservice
+namespace calculadora.utilidades
 {
     class CalculadoraService
     {

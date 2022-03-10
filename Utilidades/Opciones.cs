@@ -1,4 +1,4 @@
-namespace calculadora.utilidades.enumerado
+namespace calculadora.utilidades
     {
     enum Opciones
     {
