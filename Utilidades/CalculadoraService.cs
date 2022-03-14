@@ -1,4 +1,5 @@
 using System;
+using calculadora.utilidades;
 
 namespace calculadora.utilidades
 {
@@ -31,29 +32,29 @@ namespace calculadora.utilidades
             Console.WriteLine("Introduzca un segundo número");
             segundonumero = Int32.Parse(Console.ReadLine());
 
-            switch (opcion)
+            switch (Opciones)
             {
-                case 1:
+                case Opciones.Sumar:
                 Console.Clear();
                 Console.WriteLine("Ha selecionado la opcion de sumar");
                 calculadora.Sumar(primernumero, segundonumero);
                 break;
                 
             
-                case 2:
+                case Opciones.Restar:
                 Console.Clear();
                 Console.WriteLine("Ha selecionado la opcion de restar");
                 calculadora.Restar(primernumero, segundonumero);
                 break;
             
-                case 3: 
+                case Opciones.Multiplicar: 
             
                 Console.Clear();
                 Console.WriteLine("Ha selecionado la opcion de multiplicar");
                 calculadora.Multiplicar(primernumero, segundonumero);
                 break;
                 
-                case 4:
+                case Opciones.Dividir:
                 Console.Clear();
                 Console.WriteLine("Ha selecionado la opcion de dividir");
                 calculadora.Dividir(primernumero, segundonumero);
@@ -64,36 +65,41 @@ namespace calculadora.utilidades
 
            
     }
-        public static int Menu()
+        public static Opciones Menu()
         {
             Console.Title = "CALCULADORA";
             Console.WriteLine("BIENVENID@ A LA CALCULADORA DE MARÍA Y JESÚS");
             Console.WriteLine("--------------------------------------------");
             opcionesDelMenu();
-            int opcion = 0;
+            Opciones opcion ;
             try 
             {
-                opcion = Int32.Parse(Console.ReadLine());
+                opcion = (Opciones)Int32.Parse(Console.ReadLine());
                 Console.WriteLine("La opción elegida es la: " + opcion);
                 Console.WriteLine("");
-            }
-            catch (Exception)
-            {
-                Console.WriteLine("El valor introducido no es un valor númerico");
-            }
 
-            while (opcionMenu(opcion)==false)
+                while (opcionMenu(opcion)==false)
             {
                Console.Clear();
                Console.WriteLine("Seleccione una opcion valida");
                opcionesDelMenu();
-               opcion = Int32.Parse(Console.ReadLine()); 
+               opcion = (Opciones)Int32.Parse(Console.ReadLine()); 
             }
             return opcion;
+
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("El valor introducido no es un valor númerico");
+                // TO DO: esto hay que cambiarlo por la opcion Salir. 
+                return Opciones.Sumar;  
+            }
+
+            
         }
-        public static bool opcionMenu(int opcion)
+        public static bool opcionMenu(Opciones opcion)
         {
-            if ((opcion == 1) || (opcion == 2) || (opcion == 3) || (opcion == 4) || (opcion == 5))
+            if ((opcion == Opciones.Sumar ) || (opcion == Opciones.Restar) || (opcion == Opciones.Multiplicar) || (opcion == Opciones.Dividir) || (opcion == 5))
             {
                 return true;
             }
