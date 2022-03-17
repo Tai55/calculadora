@@ -9,63 +9,67 @@ namespace calculadora.utilidades
         {
             
             Calculadora calculadora = new Calculadora();
-            int opcion = 0;
+            Opciones opcion = 0 ;
             int primernumero = 0;
             int segundonumero = 0;
             
 
-        while (opcion != 5)
-        {
-            Console.Clear();
-            opcion = Menu();
-            
-            if (opcion == 5)
+            do 
             {
+                Console.Clear();
+                opcion = Menu();
+
+                Console.WriteLine("Antes de comenzar a calcular, escriba dos números");
+                Console.WriteLine("Introduzca el número que desee:");
+                primernumero = Int32.Parse(Console.ReadLine());
+                Console.WriteLine("Introduzca un segundo número");
+                segundonumero = Int32.Parse(Console.ReadLine());
+
+                switch (opcion)
+                {
+                    case Opciones.Sumar:
+                    Console.Clear();
+                    Console.WriteLine("Ha selecionado la opcion de sumar");
+                    calculadora.Sumar(primernumero, segundonumero);
+                    break;
+                    
+                
+                    case Opciones.Restar:
+                    Console.Clear();
+                    Console.WriteLine("Ha selecionado la opcion de restar");
+                    calculadora.Restar(primernumero, segundonumero);
+                    break;
+                
+                    case Opciones.Multiplicar: 
+                
+                    Console.Clear();
+                    Console.WriteLine("Ha selecionado la opcion de multiplicar");
+                    calculadora.Multiplicar(primernumero, segundonumero);
+                    break;
+                    
+                    case Opciones.Dividir:
+                    Console.Clear();
+                    Console.WriteLine("Ha selecionado la opcion de dividir");
+                    calculadora.Dividir(primernumero, segundonumero);
+                    break;
+                }
+                
+            }
+
+           while (opcion == Opciones.Salir);
+            {
+                
+                opcion = Menu();
                 Console.WriteLine("Nos vemos proximamente, presione ENTER para salir");
                 Console.ReadLine();
-                Environment.Exit(0);
-            }
+                Environment.Exit(0);       
+            } 
 
-            Console.WriteLine("Antes de comenzar a calcular, escriba dos números");
-            Console.WriteLine("Introduzca el número que desee:");
-            primernumero = Int32.Parse(Console.ReadLine());
-            Console.WriteLine("Introduzca un segundo número");
-            segundonumero = Int32.Parse(Console.ReadLine());
-
-            switch (Opciones)
-            {
-                case Opciones.Sumar:
-                Console.Clear();
-                Console.WriteLine("Ha selecionado la opcion de sumar");
-                calculadora.Sumar(primernumero, segundonumero);
-                break;
-                
-            
-                case Opciones.Restar:
-                Console.Clear();
-                Console.WriteLine("Ha selecionado la opcion de restar");
-                calculadora.Restar(primernumero, segundonumero);
-                break;
-            
-                case Opciones.Multiplicar: 
-            
-                Console.Clear();
-                Console.WriteLine("Ha selecionado la opcion de multiplicar");
-                calculadora.Multiplicar(primernumero, segundonumero);
-                break;
-                
-                case Opciones.Dividir:
-                Console.Clear();
-                Console.WriteLine("Ha selecionado la opcion de dividir");
-                calculadora.Dividir(primernumero, segundonumero);
-                break;
-            }
             Console.ReadLine();
         }
-
            
-    }
-        public static Opciones Menu()
+    
+      public static Opciones Menu()
         {
             Console.Title = "CALCULADORA";
             Console.WriteLine("BIENVENID@ A LA CALCULADORA DE MARÍA Y JESÚS");
