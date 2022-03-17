@@ -92,14 +92,14 @@ namespace calculadora.utilidades
             {
                 Console.WriteLine("El valor introducido no es un valor númerico");
                 // TO DO: esto hay que cambiarlo por la opcion Salir. 
-                return Opciones.Sumar;  
+                return Opciones.Salir;  
             }
 
             
         }
         public static bool opcionMenu(Opciones opcion)
         {
-            if ((opcion == Opciones.Sumar ) || (opcion == Opciones.Restar) || (opcion == Opciones.Multiplicar) || (opcion == Opciones.Dividir) || (opcion == 5))
+            if ((opcion == Opciones.Sumar ) || (opcion == Opciones.Restar) || (opcion == Opciones.Multiplicar) || (opcion == Opciones.Dividir) || (opcion == Opciones.Salir))
             {
                 return true;
             }
