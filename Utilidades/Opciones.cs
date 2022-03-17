@@ -6,6 +6,7 @@ namespace calculadora.utilidades
     Restar = 2,
     Multiplicar = 3 ,
     Dividir = 4,
+    Salir = 5,
 
     }   
 }
