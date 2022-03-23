@@ -1,6 +1,6 @@
 ﻿using System;
-using calculadora.utilidades.enumerado;
-using calculadora.utilidades.calculadoraservice;
+using calculadora.utilidades;
+
 
 namespace calculadora.utilidades.programa
 {

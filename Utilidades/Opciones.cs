@@ -1,4 +1,4 @@
-namespace calculadora.utilidades.enumerado
+namespace calculadora.utilidades
     {
     enum Opciones
     {
@@ -6,6 +6,7 @@ namespace calculadora.utilidades.enumerado
     Restar = 2,
     Multiplicar = 3 ,
     Dividir = 4,
+    Salir = 5,
 
     }   
 }

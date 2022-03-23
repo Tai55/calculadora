@@ -1,6 +1,7 @@
 using System;
+using calculadora.utilidades;
 
-namespace calculadora.utilidades.calculadoraservice
+namespace calculadora.utilidades
 {
     class CalculadoraService
     {
@@ -8,92 +9,101 @@ namespace calculadora.utilidades.calculadoraservice
         {
             
             Calculadora calculadora = new Calculadora();
-            int opcion = 0;
+            Opciones opcion = 0 ;
             int primernumero = 0;
             int segundonumero = 0;
             
 
-        while (opcion != 5)
-        {
-            Console.Clear();
-            opcion = Menu();
-            
-            if (opcion == 5)
+            do 
             {
+                Console.Clear();
+                opcion = Menu();
+
+                Console.WriteLine("Antes de comenzar a calcular, escriba dos números");
+                Console.WriteLine("Introduzca el número que desee:");
+                primernumero = Int32.Parse(Console.ReadLine());
+                Console.WriteLine("Introduzca un segundo número");
+                segundonumero = Int32.Parse(Console.ReadLine());
+
+                switch (opcion)
+                {
+                    case Opciones.Sumar:
+                    Console.Clear();
+                    Console.WriteLine("Ha selecionado la opcion de sumar");
+                    calculadora.Sumar(primernumero, segundonumero);
+                    break;
+                    
+                
+                    case Opciones.Restar:
+                    Console.Clear();
+                    Console.WriteLine("Ha selecionado la opcion de restar");
+                    calculadora.Restar(primernumero, segundonumero);
+                    break;
+                
+                    case Opciones.Multiplicar: 
+                
+                    Console.Clear();
+                    Console.WriteLine("Ha selecionado la opcion de multiplicar");
+                    calculadora.Multiplicar(primernumero, segundonumero);
+                    break;
+                    
+                    case Opciones.Dividir:
+                    Console.Clear();
+                    Console.WriteLine("Ha selecionado la opcion de dividir");
+                    calculadora.Dividir(primernumero, segundonumero);
+                    break;
+                }
+                
+            }
+
+           while (opcion == Opciones.Salir);
+            {
+                
+                opcion = Menu();
                 Console.WriteLine("Nos vemos proximamente, presione ENTER para salir");
                 Console.ReadLine();
-                Environment.Exit(0);
-            }
+                Environment.Exit(0);       
+            } 
 
-            Console.WriteLine("Antes de comenzar a calcular, escriba dos números");
-            Console.WriteLine("Introduzca el número que desee:");
-            primernumero = Int32.Parse(Console.ReadLine());
-            Console.WriteLine("Introduzca un segundo número");
-            segundonumero = Int32.Parse(Console.ReadLine());
-
-            switch (opcion)
-            {
-                case 1:
-                Console.Clear();
-                Console.WriteLine("Ha selecionado la opcion de sumar");
-                calculadora.Sumar(primernumero, segundonumero);
-                break;
-                
-            
-                case 2:
-                Console.Clear();
-                Console.WriteLine("Ha selecionado la opcion de restar");
-                calculadora.Restar(primernumero, segundonumero);
-                break;
-            
-                case 3: 
-            
-                Console.Clear();
-                Console.WriteLine("Ha selecionado la opcion de multiplicar");
-                calculadora.Multiplicar(primernumero, segundonumero);
-                break;
-                
-                case 4:
-                Console.Clear();
-                Console.WriteLine("Ha selecionado la opcion de dividir");
-                calculadora.Dividir(primernumero, segundonumero);
-                break;
-            }
             Console.ReadLine();
         }
-
            
-    }
-        public static int Menu()
+    
+      public static Opciones Menu()
         {
             Console.Title = "CALCULADORA";
             Console.WriteLine("BIENVENID@ A LA CALCULADORA DE MARÍA Y JESÚS");
             Console.WriteLine("--------------------------------------------");
             opcionesDelMenu();
-            int opcion = 0;
+            Opciones opcion ;
             try 
             {
-                opcion = Int32.Parse(Console.ReadLine());
+                opcion = (Opciones)Int32.Parse(Console.ReadLine());
                 Console.WriteLine("La opción elegida es la: " + opcion);
                 Console.WriteLine("");
-            }
-            catch (Exception)
-            {
-                Console.WriteLine("El valor introducido no es un valor númerico");
-            }
 
-            while (opcionMenu(opcion)==false)
+                while (opcionMenu(opcion)==false)
             {
                Console.Clear();
                Console.WriteLine("Seleccione una opcion valida");
                opcionesDelMenu();
-               opcion = Int32.Parse(Console.ReadLine()); 
+               opcion = (Opciones)Int32.Parse(Console.ReadLine()); 
             }
             return opcion;
+
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("El valor introducido no es un valor númerico");
+                // TO DO: esto hay que cambiarlo por la opcion Salir. 
+                return Opciones.Salir;  
+            }
+
+            
         }
-        public static bool opcionMenu(int opcion)
+        public static bool opcionMenu(Opciones opcion)
         {
-            if ((opcion == 1) || (opcion == 2) || (opcion == 3) || (opcion == 4) || (opcion == 5))
+            if ((opcion == Opciones.Sumar ) || (opcion == Opciones.Restar) || (opcion == Opciones.Multiplicar) || (opcion == Opciones.Dividir) || (opcion == Opciones.Salir))
             {
                 return true;
             }
