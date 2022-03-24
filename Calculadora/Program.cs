@@ -2,7 +2,7 @@
 using calculadora.utilidades;
 
 
-namespace calculadora.utilidades.programa
+namespace calculadora
 {
     class Program
     {
