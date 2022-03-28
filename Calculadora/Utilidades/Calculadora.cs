@@ -42,6 +42,7 @@ namespace calculadora.utilidades
         {
             double resultado = Math.Pow(numero1,numero2);
             Console.WriteLine($"El resultado de la potencia es: {resultado}");
+            operaciones.Add($"El resultado de la división es: {resultado}");
             return resultado;
         }
 
