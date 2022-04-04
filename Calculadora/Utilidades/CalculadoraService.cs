@@ -27,44 +27,53 @@ namespace calculadora.utilidades
                 switch (opcion)
                 {
                     case Opciones.Sumar:
-                    Console.Clear();
-                    Console.WriteLine("Ha selecionado la opcion de sumar");
-                    calculadora.Sumar(primernumero, segundonumero);
+                        Console.Clear();
+                        Console.WriteLine("Ha selecionado la opcion de sumar");
+                        calculadora.Sumar(primernumero, segundonumero);
                     break;
                     
                 
                     case Opciones.Restar:
-                    Console.Clear();
-                    Console.WriteLine("Ha selecionado la opcion de restar");
-                    calculadora.Restar(primernumero, segundonumero);
+                        Console.Clear();
+                        Console.WriteLine("Ha selecionado la opcion de restar");
+                        calculadora.Restar(primernumero, segundonumero);
                     break;
                 
                     case Opciones.Multiplicar: 
-                
-                    Console.Clear();
-                    Console.WriteLine("Ha selecionado la opcion de multiplicar");
-                    calculadora.Multiplicar(primernumero, segundonumero);
+                        Console.Clear();
+                        Console.WriteLine("Ha selecionado la opcion de multiplicar");
+                        calculadora.Multiplicar(primernumero, segundonumero);
                     break;
                     
                     case Opciones.Dividir:
-                    Console.Clear();
-                    Console.WriteLine("Ha selecionado la opcion de dividir");
-                    calculadora.Dividir(primernumero, segundonumero);
+                        Console.Clear();
+                        Console.WriteLine("Ha selecionado la opcion de dividir");
+                        calculadora.Dividir(primernumero, segundonumero);
+                    break;
+                    
+                    case Opciones.Potencia:
+                        Console.Clear();
+                        Console.WriteLine("Has seleccionado la opcion de potencia");
+                        calculadora.Potencia(primernumero, segundonumero);
+                    break;
+
+                    case Opciones.Registro:
+                        Console.Clear();
+                        calculadora.VerListaOperaciones();
+                    break;
+                    
+                    case Opciones.Salir:
+                        Console.Clear();
+                        Console.WriteLine("Nos vemos proximamente, presione ENTER PARA SALIR");
+                        Console.ReadLine();
                     break;
                 }
                 
             }
+            while(opcion != Opciones.Salir);
+           
 
-           while (opcion == Opciones.Salir);
-            {
-                
-                opcion = Menu();
-                Console.WriteLine("Nos vemos proximamente, presione ENTER para salir");
-                Console.ReadLine();
-                Environment.Exit(0);       
-            } 
-
-            Console.ReadLine();
+            //Console.ReadLine();
         }
            
     
@@ -116,7 +125,9 @@ namespace calculadora.utilidades
             Console.WriteLine("2. Resta");
             Console.WriteLine("3. Multiplicación");
             Console.WriteLine("4. División");
-            Console.WriteLine("5. Cerrar calculadora");
+            Console.WriteLine("5. Potencia");
+            Console.WriteLine("6. Registro de operaciones");
+            Console.WriteLine("7. SALIR");
             Console.WriteLine("Elija una opción");
         }
 
