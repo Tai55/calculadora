@@ -121,14 +121,19 @@ namespace calculadora.utilidades
         }
         public static void opcionesDelMenu()
         {
-            Console.WriteLine("1. Suma");
+            Opciones opciones = Opciones.Salir; 
+            foreach (var opcion in Enum.GetNames(opciones.GetType()))
+            {
+                var opcionValue = (int)Enum.Parse(opciones.GetType(), opcion);
+                Console.WriteLine($"{opcionValue}. {opcion}");
+            }
+
+           /* Console.WriteLine("1. Suma");
             Console.WriteLine("2. Resta");
             Console.WriteLine("3. Multiplicación");
             Console.WriteLine("4. División");
-            Console.WriteLine("5. Potencia");
-            Console.WriteLine("6. Registro de operaciones");
-            Console.WriteLine("7. SALIR");
-            Console.WriteLine("Elija una opción");
+            Console.WriteLine("5. Cerrar calculadora");
+            Console.WriteLine("Elija una opción");  */
         }
 
     }
