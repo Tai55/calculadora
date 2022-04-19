@@ -16,7 +16,10 @@ namespace TestProjectCalculadora
             int segundonumero = 5;
             
             //ACT
-            int resultado = Calculadora.Restar(primernumero, segundonumero);
+            Calculadora miCalculadora = new Calculadora();
+            int resultado = miCalculadora.Restar(primernumero, segundonumero);
+            
+            //ASSERT
         }
     }
 }
