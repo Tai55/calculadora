@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace calculadora.utilidades
 {
-    class Calculadora
+    public class Calculadora
     {    
     List <string> operaciones = new List<string>();
     
