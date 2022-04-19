@@ -68,7 +68,8 @@ namespace calculadora.utilidades
                         Console.ReadLine();
                     break;
                 }
-                
+                Console.WriteLine("Presione cualquier tecla para continuar");
+                Console.ReadKey();
             }
             while(opcion != Opciones.Salir);
            
